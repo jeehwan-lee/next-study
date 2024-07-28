@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white overflow-scroll bg-[url('/grid.svg')] pb-36">
-        <GlobalNav />
         {children}
       </body>
     </html>

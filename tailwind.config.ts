@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
+import { Config } from "tailwindcss";
 
-const config: Config = {
+export default {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./ui/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -33,11 +33,11 @@ const config: Config = {
         },
         highlight: {
           "0%": {
-            ["border-color"]: theme("colors.vercel.pink"),
+            background: theme("colors.vercel.pink"),
             color: theme("colors.white"),
           },
           "40%": {
-            ["border-color"]: theme("colors.vercel.pink"),
+            background: theme("colors.vercel.pink"),
             color: theme("colors.white"),
           },
         },
@@ -71,7 +71,7 @@ const config: Config = {
             opacity: "1",
           },
           "100%": {
-            opacity: "10",
+            opacity: "0",
           },
         },
       }),
@@ -79,5 +79,3 @@ const config: Config = {
   },
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
 } satisfies Config;
-
-export default config;

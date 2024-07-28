@@ -3,8 +3,8 @@ import ItemList from "./item-list";
 
 export default function Home() {
   return (
-    <main>
-      <h1>Hello, Next.js</h1>
+    <main className="flex flex-col p-4">
+      <h1>Hello, Next.js!</h1>
     </main>
   );
 }
